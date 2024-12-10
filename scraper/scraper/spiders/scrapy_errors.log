@@ -1,0 +1,442 @@
+2024-12-09 18:49:07 [CRITICAL] Unhandled error in Deferred:
+2024-12-09 18:49:07 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\driver_finder.py", line 42, in get_path
+    path = SeleniumManager().driver_location(options) if path is None else path
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\selenium_manager.py", line 96, in driver_location
+    result = self.run(args)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\selenium_manager.py", line 121, in run
+    raise WebDriverException(f"Unsuccessful command executed: {command}.\n{result}{stderr}")
+selenium.common.exceptions.WebDriverException: Message: Unsuccessful command executed: C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\twisted\internet\defer.py", line 1697, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\scrapy\crawler.py", line 128, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\scrapy\crawler.py", line 140, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\scrapy\spiders\__init__.py", line 53, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "D:\Actual useful stuff\Scrapers\db_gun_scraper\scraper\scraper\spiders\spider.py", line 35, in __init__
+    self.driver = webdriver.Chrome()
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    self.service.path = DriverFinder.get_path(self.service, self.options)
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\driver_finder.py", line 44, in get_path
+    raise NoSuchDriverException(f"Unable to obtain {service.path} using Selenium Manager; {err}")
+selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain chromedriver using Selenium Manager; Message: Unsuccessful command executed: C:\Users\Alex\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2024-12-09 18:52:15 [ERROR] Unknown error occurred while getting div attributes for debug_zip zip_code: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:17 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90001: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:18 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90002: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:20 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90003: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:21 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90004: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:23 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90005: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:24 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90006: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:26 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90007: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:28 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90008: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:29 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90009: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:31 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90010: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:33 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90011: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:34 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90012: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
+2024-12-09 18:52:36 [ERROR] Unknown error occurred while getting div attributes for debug_zip 90013: Message: element click intercepted: Element <input type="text" id="search" name="search" class="form-control search-control pac-target-input" placeholder="search by zip, city, state" autocomplete="off"> is not clickable at point (250, 522). Other element would receive the click: <div id="cookie-law-info-bar" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; bottom: 0px; position: fixed; display: block;">...</div>
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF761D16CF5+28821]
+	(No symbol) [0x00007FF761C83880]
+	(No symbol) [0x00007FF761B2578A]
+	(No symbol) [0x00007FF761B80E8E]
+	(No symbol) [0x00007FF761B7E92C]
+	(No symbol) [0x00007FF761B7BAF6]
+	(No symbol) [0x00007FF761B7AA51]
+	(No symbol) [0x00007FF761B6CBA0]
+	(No symbol) [0x00007FF761B9F2FA]
+	(No symbol) [0x00007FF761B6C3F6]
+	(No symbol) [0x00007FF761B9F510]
+	(No symbol) [0x00007FF761BBF412]
+	(No symbol) [0x00007FF761B9F0A3]
+	(No symbol) [0x00007FF761B6A778]
+	(No symbol) [0x00007FF761B6B8E1]
+	GetHandleVerifier [0x00007FF76204FCED+3408013]
+	GetHandleVerifier [0x00007FF76206745F+3504127]
+	GetHandleVerifier [0x00007FF76205B63D+3455453]
+	GetHandleVerifier [0x00007FF761DDBDFB+835995]
+	(No symbol) [0x00007FF761C8EB9F]
+	(No symbol) [0x00007FF761C8A854]
+	(No symbol) [0x00007FF761C8A9ED]
+	(No symbol) [0x00007FF761C7A1D9]
+	BaseThreadInitThunk [0x00007FF8E864259D+29]
+	RtlUserThreadStart [0x00007FF8EA28AF38+40]
+
